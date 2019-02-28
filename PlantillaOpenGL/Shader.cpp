@@ -85,6 +85,14 @@ Shader::Shader(const char * rutaVertex,
 	glUseProgram(shaderID);
 }
 
+void Shader::enlazar() {
+	glUseProgram(shaderID);
+}
+
+void Shader::desenlazar() {
+	glUseProgram(0);
+}
+
 void Shader::verificarCompilacion(GLuint id) {
 	GLint resultado = GL_FALSE;
 	GLint longitudLog = 0;
